@@ -33,3 +33,14 @@ const taskList = [];
  
 
     SubmitButton.addEventListener('submit', handleSubmit);
+
+    
+    const testObject = { 'one': 1, 'two': 2, 'three': 3 };
+
+// Put the object into storage
+localStorage.setItem('taskList', JSON.stringify(taskList));
+
+// Retrieve the object from storage
+const retrievedObject = localStorage.getItem('taskList');
+
+console.log('retrievedObject: ', JSON.parse(retrievedObject));
